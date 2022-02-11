@@ -2,6 +2,6 @@
 Time to find out with this short interactive game. Choose a house, make friends... and save the wizarding world from Voldemort!
 
 ### How to play:
-Clone the repository and execute harry-potter-game.py.
+Clone the repository and execute `python harry-potter-game.py` on the command line.
 
 ![Hogwarts](https://cdn.pixabay.com/photo/2018/06/15/11/16/hogwarts-3476786_960_720.png)
