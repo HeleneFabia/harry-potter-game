@@ -6,10 +6,10 @@ def help_death_eaters():
     print("""They want you to help them resurrect Voldemort. Do you help them or refuse?""")
 
     choice = input ("> ")
-    if "help" in choice:
+    if "help" in choice.lower():
         print(f"""Voldemort returns and together you conquer the world. Muahahahhaahaaaa!!!""")
         exit(0)
-    elif "refuse" in choice:
+    elif "refuse" in choice.lower():
         print("""Draco and his crew don't like your decision at all.
         They Imperius you and make you resurrect Voldemort anyway.
         As Voldi's new servant, you help him enslave the world. Too bad.""")
@@ -23,21 +23,21 @@ def sorting_hat_new():
     Do you choose Gryffindor, Hufflepuff, Ravenclaw or Slytherin?""")
 
     choice = input ("> ")
-    if "Gryffindor" in choice:
+    if "gryffindor" in choice.lower():
         print("Gryffindor it is!!")
         hermione()
-    elif "Hufflepuff" in choice:
+    elif "hufflepuff" in choice.lower():
         print("""Hufflepuff it is!!
         You become a kind and loyal member of your house.
         However, spending so much time helping your classmates with their homework doesn't leave you time to practice enough magic.
         When you encounter Voldemort, he finishes you off. Too bad.""")
         exit(0)
-    elif "Ravenclaw" in choice:
+    elif "ravenclaw" in choice.lower():
         print("""Ravenclaw it is!!
         You spend hours upon hours in the library and in your sixth year invent 'Rocallas imperialis', a super powerful spell.
         This spell allows you to defeat Voldemort in the final battle. Nice work! The magical world is saved and worships you forever.""")
         exit(0)
-    elif "Slytherin" in choice:
+    elif "slytherin" in choice.lower():
         print("""Haven't you learned anything at all?
         Once you're kicked out of Slytherin, you're out.
         You get expulsed from Hogwarts and die never having fulfilled your wizard potential.
@@ -52,11 +52,11 @@ def draco():
     print(f"""Draco Malfoy offers to be your friend. Do you accept his offer?""")
 
     choice = input ("> ")
-    if "yes" in choice:
+    if "yes" in choice.lower():
         print(f"You and {diagon_alley.your_pet} become besties with Draco and his Death Eater friends.")
         # and {pet_name}
         help_death_eaters()
-    elif "no" in choice:
+    elif "no" in choice.lower():
         print("""Draco's father Lucius has you kicked out of Slytherin. Now you have to get sorted into a new house. Shame on you!!""")
         sorting_hat_new()
     else:
@@ -69,10 +69,10 @@ def pet():
     What do you do? Do you take {diagon_alley.your_pet} with you or do you leave it behind?""")
 
     choice = input ("> ")
-    if "take" in choice:
+    if "take" in choice.lower():
         print(f"""Smart decision! Voldemort is allergic to {diagon_alley.your_pet}, sneezes and explodes. The wizarding world is saved!!""")
         exit(0)
-    elif "leave" in choice:
+    elif "leave" in choice.lower():
         print("""When faced by Voldemort, you stand no choice against him and he Avada Kedavras you immediately.""")
         exit(0)
     else:
@@ -85,13 +85,13 @@ def hermione():
     She offers to be friends with you. Do you accept her offer?""")
 
     choice = input ("> ")
-    if "yes" in choice:
+    if "yes" in choice.lower():
         print("""You and your new best friend start to live in the library.
         Although reading about unicorns and witch hunting is interesting, you never learn how to become a powerful magician.
         When faced by Voldemort, you can name all of Dumbledore's titles and list all chief goblin of Gringotts since 1798.
         But since you never learned how to defend yourself, Voldi finishes you off. Oops!""")
         exit(0)
-    elif "no" in choice:
+    elif "no" in choice.lower():
         print("""You don't really have any friends. But that's okay, since now you have tons of time to practice spells.
         In your seventh year, Voldemort finally faces you.""")
         pet()
@@ -106,21 +106,21 @@ def sorting_hat():
     Which house do you prefer? Gryffindor, Hufflepuff, Ravenclaw or Slytherin? Choose wisely!""")
 
     choice = input ("> ")
-    if "Gryffindor" in choice:
+    if "gryffindor" in choice.lower():
         print("Gryffindor it is!!")
         hermione()
-    elif "Hufflepuff" in choice:
+    elif "hufflepuff" in choice.lower():
         print("""Hufflepuff it is!!
         You become a kind and loyal member of your house.
         However, spending so much time helping your classmates with their homework doesn't leave you time to practice enough magic.
         When you encounter Voldemort, he finishes you off. Too bad.""")
         exit(0)
-    elif "Ravenclaw" in choice:
+    elif "ravenclaw" in choice.lower():
         print("""Ravenclaw it is!!
         You spend hours upon hours in the library and in your sixth year invent 'Rocallas imperialis', a super powerful spell.
         This spell allows you to defeat Voldemort in the final battle. Nice work! The magical world is saved and worships you forever.""")
         exit(0)
-    elif "Slytherin" in choice:
+    elif "slytherin" in choice.lower():
         print("Slytherin it is!!")
         draco()
     else:
@@ -133,12 +133,12 @@ def diagon_alley():
     You can either buy a cat or an owl. Which one do you choose?""")
 
     choice = input ("> ")
-    if "cat" in choice:
+    if "cat" in choice.lower():
         print("""Good choice! How do you choose to name your cat?""")
         pet_name = input("> ")
         diagon_alley.your_pet = f"your cat {pet_name}"
         sorting_hat()
-    elif "owl" in choice:
+    elif "owl" in choice.lower():
         print("""Good choice! How do you choose to name your owl?""")
         pet_name = input("> ")
         diagon_alley.your_pet = f"your owl {pet_name}"
@@ -154,10 +154,10 @@ def start():
     What do you do? Do you decide to open it or think it's probably spam mail and throw it away?""")
 
     choice = input ("> ")
-    if "open" in choice:
+    if "open" in choice.lower():
         diagon_alley()
     elif "throw" in choice:
-        print("""You die never having fulfilled your wizard potential.
+        print("""Never be too suspicious about the mail you receive. You die never having fulfilled your wizard potential.
          Meanwhile, Voldemort takes over the world.""")
         exit(0)
     else:
