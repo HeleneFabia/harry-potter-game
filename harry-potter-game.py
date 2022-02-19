@@ -156,7 +156,7 @@ def start():
     choice = input ("> ")
     if "open" in choice.lower():
         diagon_alley()
-    elif "throw" in choice:
+    elif "throw" in choice.lower():
         print("""Never be too suspicious about the mail you receive. You die never having fulfilled your wizard potential.
          Meanwhile, Voldemort takes over the world.""")
         exit(0)
